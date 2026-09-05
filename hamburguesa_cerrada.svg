@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="128" height="128" shape-rendering="crispEdges">
+  <!-- Top Bun -->
+  <rect x="4" y="1" width="8" height="1" fill="#D35400"/>
+  <rect x="2" y="2" width="12" height="1" fill="#E67E22"/>
+  <rect x="4" y="2" width="1" height="1" fill="#F5CBA7"/> <!-- Sésamo -->
+  <rect x="9" y="2" width="1" height="1" fill="#F5CBA7"/> <!-- Sésamo -->
+  <rect x="1" y="3" width="14" height="2" fill="#E67E22"/>
+  <rect x="11" y="3" width="1" height="1" fill="#000"/> <!-- Ojo -->
+
+  <!-- Lechuga -->
+  <rect x="1" y="5" width="14" height="1" fill="#2ECC71"/>
+
+  <!-- Queso -->
+  <rect x="1" y="6" width="14" height="1" fill="#F1C40F"/>
+  <rect x="4" y="7" width="2" height="1" fill="#F1C40F"/>
+  <rect x="10" y="7" width="2" height="1" fill="#F1C40F"/>
+
+  <!-- Carne -->
+  <rect x="2" y="7" width="12" height="2" fill="#5D4037"/>
+
+  <!-- Bottom Bun -->
+  <rect x="2" y="9" width="12" height="2" fill="#E67E22"/>
+  <rect x="4" y="11" width="8" height="1" fill="#D35400"/>
+</svg>

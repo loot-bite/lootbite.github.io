@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="128" height="128" shape-rendering="crispEdges">
+  <!-- Top Bun (Inclinado) -->
+  <rect x="4" y="0" width="8" height="1" fill="#D35400"/>
+  <rect x="2" y="1" width="11" height="1" fill="#E67E22"/>
+  <rect x="3" y="1" width="1" height="1" fill="#F5CBA7"/> <!-- Sésamo -->
+  <rect x="8" y="1" width="1" height="1" fill="#F5CBA7"/> <!-- Sésamo -->
+  <rect x="1" y="2" width="12" height="2" fill="#E67E22"/>
+  <rect x="10" y="2" width="1" height="1" fill="#000"/> <!-- Ojo -->
+  
+  <!-- Queso cayendo -->
+  <rect x="2" y="4" width="2" height="1" fill="#F1C40F"/>
+  <rect x="10" y="4" width="3" height="1" fill="#F1C40F"/>
+
+  <!-- Carne (Arriba) -->
+  <rect x="2" y="5" width="2" height="1" fill="#5D4037"/>
+
+  <!-- Mandíbula Inferior (Inclinada hacia abajo) -->
+  <!-- Carne (Abajo) -->
+  <rect x="1" y="10" width="13" height="2" fill="#5D4037"/>
+  <rect x="2" y="10" width="3" height="1" fill="#F1C40F"/> <!-- Queso inferior -->
+  
+  <!-- Bottom Bun -->
+  <rect x="2" y="12" width="11" height="2" fill="#E67E22"/>
+  <rect x="3" y="14" width="9" height="1" fill="#D35400"/>
+</svg>

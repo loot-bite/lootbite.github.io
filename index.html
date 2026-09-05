@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LootBite</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="game-container">
+    
+    <!-- Pantalla de Inicio -->
+    <div id="start-screen" class="overlay">
+      <!-- Espacio reservado para tu logo -->
+      <div id="logo-container">
+        <!-- Reemplaza la URL de abajo por la imagen de tu logo -->
+        <img src="https://via.placeholder.com/120x120.png?text=TU+LOGO" alt="Logo" id="game-logo">
+      </div>
+      <h1>LOOT-BIT</h1>
+      <p>Junta todas las bolitas antes de que se agote el tiempo.</p>
+      <button class="action-btn" onclick="startGame()">INICIAR</button>
+    </div>
+
+    <!-- Header con Tiempo -->
+    <div id="header">
+      TIEMPO: <span id="time-display">10</span>s
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <!-- Controles Táctiles -->
+    <div id="touch-controls">
+      <button class="dbtn" id="btn-up">▲</button>
+      <button class="dbtn" id="btn-left">◀</button>
+      <button class="dbtn" id="btn-right">▶</button>
+      <button class="dbtn" id="btn-down">▼</button>
+    </div>
+
+    <!-- Pantalla Victoria -->
+    <div id="win-screen" class="overlay hidden">
+      <div class="pixel-burger">🍔</div>
+      <h1>¡VICTORIA!</h1>
+      <p>Comiste todos los puntos a tiempo.</p>
+      <button class="action-btn" onclick="startGame()">INICIAR DE NUEVO</button>
+    </div>
+
+    <!-- Pantalla Derrota -->
+    <div id="lose-screen" class="overlay hidden">
+      <h1>¡TIEMPO AGOTADO!</h1>
+      <p>Inténtalo de nuevo.</p>
+      <button class="action-btn" onclick="startGame()">REINTENTAR</button>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
