@@ -13,30 +13,30 @@
     
     <!-- Pantalla de Inicio -->
     <div id="start-screen" class="overlay">
-      <!-- Espacio reservado para tu logo -->
       <div id="logo-container">
-        <!-- Reemplaza la URL de abajo por la imagen de tu logo -->
-        <img src="logo.png" alt="Logo" id="game-logo">
+        <img src="logo.png" alt="LootBite Logo" id="game-logo">
       </div>
-      <h1>LOOT-BIT</h1>
+      <h1>LOOT-BITE</h1>
       <p>Junta todas las bolitas antes de que se agote el tiempo.</p>
       <button class="action-btn" onclick="startGame()">INICIAR</button>
     </div>
 
     <!-- Header con Tiempo -->
     <div id="header">
-      TIEMPO: <span id="time-display">10</span>s
+      TIEMPO: <span id="time-display">20</span>s
     </div>
 
-    <!-- Canvas -->
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <!-- Área de Juego / Canvas -->
+    <div id="canvas-wrapper">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
 
-    <!-- Controles Táctiles -->
+    <!-- Controles Táctiles Integrados -->
     <div id="touch-controls">
-      <button class="dbtn" id="btn-up">▲</button>
-      <button class="dbtn" id="btn-left">◀</button>
-      <button class="dbtn" id="btn-right">▶</button>
-      <button class="dbtn" id="btn-down">▼</button>
+      <button class="dbtn" id="btn-up" aria-label="Arriba">▲</button>
+      <button class="dbtn" id="btn-left" aria-label="Izquierda">◀</button>
+      <button class="dbtn" id="btn-right" aria-label="Derecha">▶</button>
+      <button class="dbtn" id="btn-down" aria-label="Abajo">▼</button>
     </div>
 
     <!-- Pantalla Victoria -->
@@ -44,7 +44,7 @@
       <div class="pixel-burger">🍔</div>
       <h1>¡VICTORIA!</h1>
       <p>¡FELICIDADES! Ganaste una gaseosa gratis</p>
-      <button class="action-btn" onclick="startGame()">INICIAR DE NUEVO</button>
+      <button class="action-btn" onclick="startGame()">JUGAR DE NUEVO</button>
     </div>
 
     <!-- Pantalla Derrota -->
