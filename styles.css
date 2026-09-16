@@ -8,14 +8,11 @@
 html, body {
   width: 100%;
   height: 100%;
+  height: 100dvh;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000;
-}
-
-body {
-  color: #ffee58;
+  background-color: #050505;
   font-family: 'Press Start 2P', monospace;
   display: flex;
   justify-content: center;
@@ -26,61 +23,79 @@ body {
   position: relative;
   text-align: center;
   border: 4px solid #d32f2f;
-  box-shadow: 0 0 20px #d32f2f;
+  box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
   background-color: #000;
   
   width: 100vw;
   height: 100vh;
-  max-width: 420px;
+  height: 100dvh;
+  max-width: 450px;
   max-height: 850px;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10px;
-  overflow: hidden;
+  padding: 10px;
 }
 
 #header {
-  font-size: 16px;
+  font-size: clamp(12px, 3.5vw, 16px);
+  color: #ffee58;
   margin-top: 5px;
+  text-shadow: 2px 2px #d32f2f;
+}
+
+#canvas-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 60vh;
 }
 
 canvas {
   background-color: #000;
-  border: 2px solid #ffee58;
+  border: 3px solid #ffee58;
   display: block;
-  width: 85vw;
-  height: 85vw;
-  max-width: 350px;
-  max-height: 350px;
+  width: 100%;
+  height: auto;
+  max-width: 380px;
+  max-height: 380px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 #touch-controls {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 8px;
-  width: 200px;
-  height: 160px;
+  gap: 6px;
+  width: min(220px, 60vw);
+  height: min(170px, 25vh);
   margin-bottom: 10px;
 }
 
 .dbtn {
-  background-color: #222;
+  background-color: #1a1a1a;
   border: 2px solid #ffee58;
   color: #ffee58;
-  font-size: 20px;
+  font-size: clamp(16px, 5vw, 22px);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 4px 0 #801010;
+  transition: transform 0.05s, background-color 0.05s;
 }
 
-.dbtn:active {
+.dbtn:active, .dbtn.active {
   background-color: #d32f2f;
   color: #fff;
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #801010;
 }
 
 #btn-up    { grid-column: 2; grid-row: 1; }
@@ -88,14 +103,13 @@ canvas {
 #btn-right { grid-column: 3; grid-row: 2; }
 #btn-down  { grid-column: 2; grid-row: 3; }
 
-/* Overlays y Contenedor de Logo */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.94);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,12 +119,12 @@ canvas {
 }
 
 #logo-container {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #game-logo {
-  max-width: 120px;
-  max-height: 120px;
+  width: min(130px, 30vw);
+  height: auto;
   object-fit: contain;
 }
 
@@ -120,20 +134,20 @@ canvas {
 
 h1 {
   color: #ffee58;
-  font-size: 16px;
-  margin-bottom: 15px;
+  font-size: clamp(14px, 4vw, 18px);
+  margin-bottom: 12px;
   text-shadow: 2px 2px #d32f2f;
 }
 
 p {
-  font-size: 10px;
+  font-size: clamp(9px, 2.5vw, 11px);
   line-height: 1.6;
   color: #fff;
   margin-bottom: 20px;
 }
 
 .pixel-burger {
-  font-size: 45px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
@@ -142,8 +156,8 @@ button.action-btn {
   color: #fff;
   font-family: 'Press Start 2P', monospace;
   border: none;
-  padding: 12px 15px;
-  font-size: 10px;
+  padding: 12px 20px;
+  font-size: 11px;
   cursor: pointer;
   box-shadow: 3px 3px 0px #ffee58;
 }
