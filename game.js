@@ -1,7 +1,7 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-const INITIAL_TIME = 20;
+const INITIAL_TIME = 15;
 let timeLeft = INITIAL_TIME;
 let timerInterval;
 let gameRunning = false;
